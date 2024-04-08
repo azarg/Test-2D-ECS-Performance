@@ -24,7 +24,7 @@ public partial struct EntitiesEnableDisableSystem : ISystem
         int.TryParse(options.NumItems.text, out var numItems);
 
         // Loop through entities and enable only required number (numItems) that the user entered
-        var commandBuffer = new EntityCommandBuffer(Allocator.TempJob);
+        var commandBuffer = new EntityCommandBuffer(Allocator.Temp);
         int counter = 0;
         
         foreach (var (entityData, entity) in 

@@ -7,10 +7,6 @@ using Unity.Transforms;
 /// Single run system that spawns enemies when the app starts
 /// Instantiates max number of items. The number is const. <see cref="EntitiesSpawnerAuthoring"/>
 /// </summary>
-
-// Run in Initilization System Group, so that it runs as soon as possible.
-// This is probably not necessary
-
 public partial struct EntitiesSpawnerSystem : ISystem
 {
     public void OnCreate(ref SystemState systemState) {
